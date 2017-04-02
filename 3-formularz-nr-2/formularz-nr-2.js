@@ -43,8 +43,8 @@ function validateForm(event) {
 	if(firstAgreement.checked == false) {
 		event.preventDefault();
 		
-		if (firstAgreement.nextElementSibling.tagName != 'P') {
-			var message = document.createElement('p'); //tworzymy tekst 'to musi byc zaznaczone', ktory sie wyswietli, jezeli ktos nie zaznaczy pierwszego checkboxa i bedzie chcial wyslac pierwszy formularz
+		if (firstAgreement.nextElementSibling.tagName != 'SPAN') {
+			var message = document.createElement('span'); //tworzymy tekst 'to musi byc zaznaczone', ktory sie wyswietli, jezeli ktos nie zaznaczy pierwszego checkboxa i bedzie chcial wyslac pierwszy formularz
 			message.innerText = 'To pole jest wymagane';
 			message.style.color = 'red';
 			firstAgreement.parentNode.insertBefore(message, 	firstAgreement.nextSibling);
