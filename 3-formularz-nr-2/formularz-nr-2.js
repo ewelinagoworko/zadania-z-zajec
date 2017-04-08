@@ -38,7 +38,18 @@ document.getElementById('wyslij').onclick = validateForm;
 
 function validateForm(event) {
 	
+	event.preventDefault(); //zeby sie nie przeladowala strona - chcemy widziec efekty
+	
 	var firstAgreement = document.getElementById('zgoda');
+	var textInputs = document.querySelectorAll('input[type=text]');
+	
+	console.log(textInputs);
+	
+	for (var i=0; i<textInputs.length; i++) {
+		if(textInputs[i].value == '') //jezeli wartosc w input'cie jest pusta
+			console.log('test' + i);
+			
+	}
 	
 	if(firstAgreement.checked == false) {
 		event.preventDefault();
